@@ -1,0 +1,160 @@
+<section class="hero-section" id="home">
+  <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-3" aria-hidden="true"></div>
+  
+  <div class="hero-container">
+    <div class="hero-content reveal-on-scroll">
+      <div class="hero-badge shimmer-badge">
+        <span class="pulse-indicator"></span>
+        <span class="badge-text">Quality Assurance &bull; Available for Roles</span>
+      </div>
+
+      <h1 class="hero-title">
+        Hi, I'm a <span class="highlight-green glow-text">Software Tester</span> 👋
+      </h1>
+      
+      <p class="hero-subtitle">
+        <span class="role-tag">QA Engineer</span>
+        <span class="separator">|</span>
+        <span class="typewriter-container">
+          <span class="typewriter-text highlight-blue" id="hero-typewriter">Manual &amp; Automation Testing</span>
+          <span class="typewriter-cursor">|</span>
+        </span>
+      </p>
+
+      <p class="hero-description">
+        I help build reliable, high-quality software by identifying bugs, validating functionality, and ensuring a seamless user experience.
+      </p>
+
+      <p class="hero-bio">
+        Software Test Engineer with 1+ year of experience in quality assurance, having executed 1,500+ test cases, reported 430+ defects, and validated 60+ REST APIs across manual, functional, API, regression, and mobile application testing. I'm now building UI automation with Python and Playwright.
+      </p>
+
+      <div class="hero-motto animated-border-box">
+        <span class="motto-icon float-icon">🚀</span>
+        <span class="motto-text">Let's build bug-free software together!</span>
+      </div>
+
+      <div class="hero-cta-group">
+        <a class="btn btn-primary shimmer-btn" href="#projects">
+          <span>View My Projects</span>
+          <span class="btn-icon anim-arrow">→</span>
+        </a>
+        <a class="btn btn-resume" href="#resume" id="hero-resume-btn">
+          <span>Download Resume</span>
+          <span class="btn-icon anim-bounce">↓</span>
+        </a>
+        <a class="btn btn-secondary" href="#contact">
+          <span>Contact Me</span>
+          <span class="btn-icon">✉</span>
+        </a>
+      </div>
+
+      <div class="hero-stats-row">
+        <div class="hero-stat">
+          <span class="stat-number count-up" data-target="1500" data-suffix="+">1,500+</span>
+          <span class="stat-label">Test Cases Executed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-number">Python &bull; Playwright</span>
+          <span class="stat-label">Automation Focus</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-number">60+ REST APIs</span>
+          <span class="stat-label">Postman &bull; Swagger</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual-wrapper reveal-on-scroll">
+      <!-- Floating Micro Badges -->
+      <div class="floating-tech-badge chip-1">
+        <span class="chip-icon">🧪</span>
+        <span class="chip-text">Playwright <strong>PASSED</strong></span>
+      </div>
+      <div class="floating-tech-badge chip-2">
+        <span class="chip-icon">⚡</span>
+        <span class="chip-text">Python <strong>Locators</strong></span>
+      </div>
+      <div class="floating-tech-badge chip-3">
+        <span class="chip-icon">📡</span>
+        <span class="chip-text">Status: <strong>200 OK</strong></span>
+      </div>
+
+      <div class="terminal-card tilt-card" id="hero-terminal">
+        <div class="terminal-glow-border"></div>
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="terminal-title">
+            <span class="term-icon pulse-icon">⚡</span>
+            <span>pytest-runner — automated_suite.py</span>
+          </div>
+          <button class="btn-rerun shimmer-btn" id="btn-rerun-hero" title="Run tests again">
+            <span class="rerun-icon spin-on-click">↻</span> Run Suite
+          </button>
+        </div>
+
+        <div class="terminal-command-line">
+          <span class="prompt-symbol">$</span>
+          <span class="command-text">pytest tests/test_smoke_suite.py -v --browser=chrome</span>
+        </div>
+
+        <!-- Animated Suite Progress Bar -->
+        <div class="terminal-progress-container" id="hero-progress-container">
+          <div class="terminal-progress-bar" id="hero-progress-bar" style="width: 100%;"></div>
+        </div>
+
+        <div class="terminal-output" id="hero-terminal-output">
+          <div class="test-row pass anim-pop">
+            <span class="test-status">PASSED</span>
+            <span class="test-name">test_login_valid_credentials()</span>
+            <span class="test-tech">Python</span>
+            <span class="test-time">0.34s</span>
+          </div>
+          <div class="test-row pass anim-pop">
+            <span class="test-status">PASSED</span>
+            <span class="test-name">test_api_status_code_200()</span>
+            <span class="test-tech">Requests</span>
+            <span class="test-time">0.12s</span>
+          </div>
+          <div class="test-row pass anim-pop">
+            <span class="test-status">PASSED</span>
+            <span class="test-name">test_form_boundary_validation()</span>
+            <span class="test-tech">Playwright</span>
+            <span class="test-time">0.28s</span>
+          </div>
+          <div class="test-row pass anim-pop">
+            <span class="test-status">PASSED</span>
+            <span class="test-name">test_database_crud_verification()</span>
+            <span class="test-tech">SQL</span>
+            <span class="test-time">0.19s</span>
+          </div>
+        </div>
+
+        <div class="terminal-summary">
+          <div class="summary-item">
+            <span class="summary-check anim-scale">✔</span>
+            <span class="summary-text"><strong class="green-text">4 passed</strong> in 0.93s</span>
+          </div>
+          <div class="summary-badge pulse-badge">
+            <span class="badge-dot"></span> 100% SUCCESS
+          </div>
+        </div>
+
+        <div class="terminal-floating-tag tag-left float-badge-left">
+          <span class="tag-icon">🐍</span> Python + Playwright
+        </div>
+        <div class="terminal-floating-tag tag-right float-badge-right">
+          <span class="tag-icon">📡</span> REST API Testing
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

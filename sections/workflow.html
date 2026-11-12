@@ -1,0 +1,278 @@
+<section class="section workflow-section" id="workflow">
+  <div class="section-container">
+    <div class="section-header text-center reveal-on-scroll">
+      <span class="section-badge shimmer-badge">FRAMEWORK &amp; LIVE DEMO</span>
+      <h2 class="section-title">Automation Testing Workflow</h2>
+      <p class="section-subtitle">A structured pipeline from requirements to defect analysis, powered by Python &amp; Playwright</p>
+    </div>
+
+    <!-- 1. Pipeline Stages Visualization -->
+    <div class="pipeline-container reveal-on-scroll">
+      <h3 class="pipeline-heading">End-to-End Automation Pipeline</h3>
+      <div class="pipeline-stages">
+        <div class="pipeline-step">
+          <div class="step-circle pulse-circle">01</div>
+          <div class="step-text">
+            <span class="stage-name">Test Requirements</span>
+            <span class="stage-sub">User stories &amp; acceptance criteria</span>
+          </div>
+        </div>
+        <div class="pipeline-connector">
+          <span class="flow-pulse"></span>
+          <span class="arrow-char">→</span>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-circle pulse-circle">02</div>
+          <div class="step-text">
+            <span class="stage-name">Script Development</span>
+            <span class="stage-sub">Page Object Model in Python</span>
+          </div>
+        </div>
+        <div class="pipeline-connector">
+          <span class="flow-pulse"></span>
+          <span class="arrow-char">→</span>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-circle pulse-circle">03</div>
+          <div class="step-text">
+            <span class="stage-name">Test Execution</span>
+            <span class="stage-sub">Pytest test runner execution</span>
+          </div>
+        </div>
+        <div class="pipeline-connector">
+          <span class="flow-pulse"></span>
+          <span class="arrow-char">→</span>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-circle pulse-circle">04</div>
+          <div class="step-text">
+            <span class="stage-name">Assertions</span>
+            <span class="stage-sub">State, status &amp; UI validations</span>
+          </div>
+        </div>
+        <div class="pipeline-connector">
+          <span class="flow-pulse"></span>
+          <span class="arrow-char">→</span>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-circle pulse-circle">05</div>
+          <div class="step-text">
+            <span class="stage-name">Test Reports</span>
+            <span class="stage-sub">Pytest HTML &amp; screenshots</span>
+          </div>
+        </div>
+        <div class="pipeline-connector">
+          <span class="flow-pulse"></span>
+          <span class="arrow-char">→</span>
+        </div>
+        <div class="pipeline-step">
+          <div class="step-circle pulse-circle">06</div>
+          <div class="step-text">
+            <span class="stage-name">Defect Analysis</span>
+            <span class="stage-sub">Triage, logs &amp; bug tickets</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Framework Components Cards -->
+    <div class="framework-grid">
+      <div class="framework-card tilt-card reveal-on-scroll">
+        <div class="framework-icon float-icon">🧪</div>
+        <div class="framework-details">
+          <span class="fw-label">Test Runner</span>
+          <span class="fw-value">Pytest</span>
+          <span class="fw-note">Fixtures, parameterized tests, test markers</span>
+        </div>
+      </div>
+
+      <div class="framework-card tilt-card reveal-on-scroll">
+        <div class="framework-icon float-icon">⚡</div>
+        <div class="framework-details">
+          <span class="fw-label">Automation Focus</span>
+          <span class="fw-value">Playwright &amp; Python</span>
+          <span class="fw-note">Automated test suites &amp; assertions</span>
+        </div>
+      </div>
+
+      <div class="framework-card tilt-card reveal-on-scroll">
+        <div class="framework-icon float-icon">🐍</div>
+        <div class="framework-details">
+          <span class="fw-label">Language</span>
+          <span class="fw-value">Python</span>
+          <span class="fw-note">Clean, readable, modular scripting</span>
+        </div>
+      </div>
+
+      <div class="framework-card tilt-card reveal-on-scroll">
+        <div class="framework-icon float-icon">🏗️</div>
+        <div class="framework-details">
+          <span class="fw-label">Design Pattern</span>
+          <span class="fw-value">Locators &amp; Reusable Functions</span>
+          <span class="fw-note">Separation of UI locators from test logic</span>
+        </div>
+      </div>
+
+      <div class="framework-card tilt-card reveal-on-scroll">
+        <div class="framework-icon float-icon">🐙</div>
+        <div class="framework-details">
+          <span class="fw-label">Version Control</span>
+          <span class="fw-value">Git &amp; GitHub</span>
+          <span class="fw-note">Branching, versioning, pull requests</span>
+        </div>
+      </div>
+
+      <div class="framework-card tilt-card reveal-on-scroll">
+        <div class="framework-icon float-icon">📊</div>
+        <div class="framework-details">
+          <span class="fw-label">Reporting</span>
+          <span class="fw-value">Pytest-HTML / Reports</span>
+          <span class="fw-note">Detailed pass/fail logs &amp; failure screenshots</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Live Automation Demo & Test Results Dashboard -->
+    <div class="live-demo-section reveal-on-scroll">
+      <div class="demo-header-bar">
+        <div>
+          <span class="live-badge pulse-badge"><span class="live-dot"></span> LIVE INTERACTIVE DEMO</span>
+          <h3 class="demo-title">Automated Test Execution Dashboard</h3>
+          <p class="demo-sub">Simulate real-time test execution and inspect pass/fail metrics live</p>
+        </div>
+        <div class="demo-controls">
+          <button class="btn-demo-action shimmer-btn active" id="run-smoke-suite">
+            <span>▶</span> Run Smoke Suite
+          </button>
+          <button class="btn-demo-action shimmer-btn" id="run-api-suite">
+            <span>▶</span> Run API Suite
+          </button>
+          <button class="btn-demo-action secondary" id="reset-suite">
+            <span class="spin-on-hover">↺</span> Reset
+          </button>
+        </div>
+      </div>
+
+      <!-- Real-Time Metrics Strip -->
+      <div class="demo-metrics-strip">
+        <div class="metric-box green tilt-box">
+          <span class="m-val count-up" id="metric-passed" data-target="18">18</span>
+          <span class="m-lbl">Passed Tests</span>
+        </div>
+        <div class="metric-box red tilt-box">
+          <span class="m-val" id="metric-failed">0</span>
+          <span class="m-lbl">Failed Tests</span>
+        </div>
+        <div class="metric-box yellow tilt-box">
+          <span class="m-val" id="metric-skipped">2</span>
+          <span class="m-lbl">Skipped</span>
+        </div>
+        <div class="metric-box blue tilt-box">
+          <span class="m-val" id="metric-rate">100%</span>
+          <span class="m-lbl">Pass Rate</span>
+        </div>
+        <div class="metric-box purple tilt-box">
+          <span class="m-val" id="metric-time">2.41s</span>
+          <span class="m-lbl">Execution Time</span>
+        </div>
+      </div>
+
+      <!-- Live Execution Console -->
+      <div class="interactive-terminal">
+        <div class="term-bar">
+          <div class="term-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="term-file">console@qa-environment: ~/tests $ pytest -v</span>
+          <span class="term-status" id="terminal-live-status">READY</span>
+        </div>
+
+        <!-- Dashboard Suite Progress Bar -->
+        <div class="dashboard-progress-track">
+          <div class="dashboard-progress-fill" id="dashboard-progress-fill" style="width: 100%;"></div>
+        </div>
+
+        <div class="term-content" id="live-terminal-log">
+          <div class="log-line info">[INFO] Initializing test session: rootdir: /portfolio/automation_suite</div>
+          <div class="log-line info">[INFO] Collected 20 items across 3 test modules</div>
+          <div class="log-line success anim-pop">✓ tests/test_login.py::test_valid_login PASSED [0.32s]</div>
+          <div class="log-line success anim-pop">✓ tests/test_login.py::test_empty_password_validation PASSED [0.18s]</div>
+          <div class="log-line success anim-pop">✓ tests/test_api_users.py::test_get_users_status_200 PASSED [0.11s]</div>
+          <div class="log-line success anim-pop">✓ tests/test_api_users.py::test_create_user_json_schema PASSED [0.24s]</div>
+          <div class="log-line success anim-pop">✓ tests/test_checkout.py::test_cart_item_count_assertion PASSED [0.45s]</div>
+          <div class="log-line warning anim-pop">s tests/test_checkout.py::test_stripe_payment_gateway SKIPPED (sandbox config)</div>
+          <div class="log-line success anim-pop">✓ tests/test_db.py::test_order_records_integrity PASSED [0.29s]</div>
+          <div class="log-line highlight">====== 18 passed, 2 skipped in 2.41s ======</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Bug Report Showcase Card -->
+    <div class="bug-showcase-container reveal-on-scroll">
+      <div class="bug-showcase-header">
+        <span class="bug-badge pulse-badge">SAMPLE DEFECT REPORT</span>
+        <h3 class="bug-showcase-title">Real-World Bug Report Structure</h3>
+        <p class="bug-showcase-subtitle">Example of detailed, actionable defect documentation provided to engineering teams</p>
+      </div>
+
+      <div class="bug-ticket-card tilt-card">
+        <div class="bug-ticket-top">
+          <div class="bug-id-tag">
+            <span class="bug-tag-id">BUG-204</span>
+            <span class="bug-severity-badge high">Severity: High</span>
+            <span class="bug-priority-badge p1">Priority: P1</span>
+          </div>
+          <span class="bug-status-badge resolved">Status: Verified &amp; Closed</span>
+        </div>
+
+        <h4 class="bug-summary-title">
+          Checkout submit button remains disabled when entering valid 10-digit postal code with trailing space
+        </h4>
+
+        <div class="bug-meta-grid">
+          <div class="meta-item">
+            <span class="meta-label">Environment:</span>
+            <span class="meta-value">Chrome 124 / Windows 11 / Staging v2.4</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Module:</span>
+            <span class="meta-value">Billing &amp; Payment Gateway</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Discovered During:</span>
+            <span class="meta-value">Boundary Value Regression Run</span>
+          </div>
+        </div>
+
+        <div class="bug-steps-box">
+          <h5 class="steps-title">Steps to Reproduce:</h5>
+          <ol class="steps-list">
+            <li>Log into the application and add any product to the shopping cart.</li>
+            <li>Proceed to checkout and fill all mandatory address fields.</li>
+            <li>In the "Postal Code" input field, type <code>"600001 "</code> (valid code followed by a single space).</li>
+            <li>Observe the "Proceed to Payment" submit button state.</li>
+          </ol>
+        </div>
+
+        <div class="bug-compare-grid">
+          <div class="compare-box expected">
+            <span class="compare-label">Expected Result:</span>
+            <p>Input field trims whitespace automatically; validation succeeds and button enables.</p>
+          </div>
+          <div class="compare-box actual">
+            <span class="compare-label">Actual Result:</span>
+            <p>Regex rejects trailing space; button remains disabled with no descriptive error message.</p>
+          </div>
+        </div>
+
+        <div class="bug-card-footer">
+          <button class="btn-inspect-bug shimmer-btn" data-action="view-bug-modal">
+            <span>🔍</span> Inspect Full Bug Report Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

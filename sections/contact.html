@@ -1,0 +1,119 @@
+<section class="section contact-section" id="contact">
+  <div class="section-container">
+    <div class="section-header text-center">
+      <span class="section-badge">GET IN TOUCH</span>
+      <h2 class="section-title">Let's Connect!</h2>
+      <p class="section-subtitle">
+        I'm always interested in connecting with QA professionals, automation engineers, and teams that value software
+        quality.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact Info Card -->
+      <div class="contact-info-card">
+        <h3 class="contact-card-title">Have a project or opportunity in mind? Let's talk!</h3>
+        <p class="contact-card-lead">
+          If you're looking for someone passionate about testing, identifying defects, and building reliable
+          applications, let's connect.
+        </p>
+
+        <div class="contact-details-list">
+          <div class="contact-item">
+            <div class="contact-icon-box green">✉️</div>
+            <div class="contact-text-box">
+              <span class="c-label">Email Address</span>
+              <div class="c-val-row">
+                <a class="c-link email-address"
+                  href="mailto:Mugilanmugilan636@gmail.com">Mugilanmugilan636@gmail.com</a>
+                <button class="btn-copy" id="copy-email-btn" type="button" title="Copy email address">
+                  <span class="copy-icon">📋</span>
+                  <span class="copy-text">Copy</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon-box blue">💼</div>
+            <div class="contact-text-box">
+              <span class="c-label">LinkedIn</span>
+              <a class="c-link" href="https://linkedin.com/in/mugilan-m-4b953527b" target="_blank" rel="noopener noreferrer">
+                linkedin.com/in/mugilan-m-4b953527b <span class="arrow-ext">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon-box purple">📞</div>
+            <div class="contact-text-box">
+              <span class="c-label">Phone</span>
+              <a class="c-link" href="tel:+919042290979">+91 9042290979</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon-box orange">📍</div>
+            <div class="contact-text-box">
+              <span class="c-label">Location</span>
+              <span class="c-static-val">Chennai, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-status-card">
+          <div class="status-indicator-ping"></div>
+          <div>
+            <strong>Available for Roles:</strong>
+            <p>Open for Software Test Engineer, QA Engineer, and QA Automation opportunities.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Contact Message Form -->
+      <div class="contact-form-card">
+        <h3 class="form-title">Send a Message</h3>
+        <p class="form-subtitle">Fill in the details below and I'll get back to you promptly.</p>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="contact-name">Your Name <span class="req">*</span></label>
+            <input type="text" id="contact-name" name="name" placeholder="e.g. Alex Johnson" required />
+            <span class="form-error" id="name-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Your Email <span class="req">*</span></label>
+            <input type="email" id="contact-email" name="email" placeholder="e.g. alex@example.com" required />
+            <span class="form-error" id="email-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject">Inquiry Type</label>
+            <select id="contact-subject" name="subject">
+              <option value="job">Software Testing / QA Job Opportunity</option>
+              <option value="automation">Test Automation Project</option>
+              <option value="consultation">API / Functional QA Consultation</option>
+              <option value="other">General Inquiries / Professional Networking</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message <span class="req">*</span></label>
+            <textarea id="contact-message" name="message" rows="4"
+              placeholder="Briefly describe your requirements or the role you are looking to fill..."
+              required></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+
+          <button class="btn btn-primary btn-submit" type="submit" id="contact-submit-btn">
+            <span>Send Message</span>
+            <span class="btn-icon">🚀</span>
+          </button>
+
+          <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

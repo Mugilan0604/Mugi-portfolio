@@ -1,0 +1,80 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 2509 >>
+stream
+BT
+/F1 9.5 Tf
+40 760 Td
+14 TL
+/F1 14 Tf
+(MUGILAN - SOFTWARE TESTER & QA AUTOMATION ENGINEER) Tj T*
+/F1 9.5 Tf
+(Tamil Nadu, India | Mugilanmugilan636@gmail.com | linkedin.com/in/mugilan-qa) Tj T*
+/F1 11 Tf
+(--------------------------------------------------------------------------------) Tj T*
+/F1 9.5 Tf
+() Tj T*
+/F1 11 Tf
+(PROFESSIONAL SUMMARY:) Tj T*
+/F1 9.5 Tf
+(Passionate Software Tester focused on delivering reliable, high-quality software) Tj T*
+(through effective manual and automated testing practices. Experience in functional) Tj T*
+(testing, test case design, bug identification, REST API testing & Swagger validation.) Tj T*
+(Continuously developing test automation skills using Python, Pytest, and Playwright.) Tj T*
+() Tj T*
+/F1 11 Tf
+(TECHNICAL SKILLS:) Tj T*
+/F1 9.5 Tf
+(- Manual Testing: Functional, Regression, Smoke, Sanity, Exploratory, BVA, EP, STLC/SDLC) Tj T*
+(- Automation Testing: Python, Pytest, Page Object Model \(POM\), XPath, CSS Selectors, Test Validation) Tj T*
+(- API Testing: Postman, Swagger / OpenAPI, REST API, HTTP Methods \(GET, POST, PUT, DELETE\), JSON Validation) Tj T*
+(- Database: SQL, MySQL, Basic CRUD Operations, Data Integrity Validation) Tj T*
+(- Tools: Git, GitHub, Jira, VS Code, Chrome DevTools) Tj T*
+() Tj T*
+/F1 11 Tf
+(PRACTICAL WORK & PROJECT EXPERIENCE:) Tj T*
+/F1 9.5 Tf
+(1. Web Application Automation Testing Framework \(Python, Pytest, POM\)) Tj T*
+(   - Automated login, navigation, form boundary validation, and checkout workflows.) Tj T*
+(   - Implemented Page Object Model \(POM\) pattern for maintainable tests.) Tj T*
+(2. REST API Testing and Automation \(Postman, Swagger / OpenAPI, Python Requests\)) Tj T*
+(   - Validated status codes, Swagger contracts, JSON response schemas, and token authorization.) Tj T*
+(3. Property Management System QA Case Study \(Manual, API & Database QA\)) Tj T*
+(   - Designed test suites covering tenant onboarding, lease lifecycle, and maintenance tickets.) Tj T*
+(   - Tested Swagger API endpoints for listings, rent calculations \(BVA\), and SQL integrity.) Tj T*
+(4. Functional Testing & Defect Management) Tj T*
+(   - Designed positive/negative test matrices, tracked defects in Jira with reproduction steps.) Tj T*
+() Tj T*
+/F1 11 Tf
+(METHODOLOGY & EDUCATION:) Tj T*
+/F1 9.5 Tf
+(- Six-Step Testing Approach: Analysis, Planning, Design, Execution, Reporting, Regression) Tj T*
+(- Committed to Continuous QA Learning & Defect Prevention) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000002804 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2873
+%%EOF

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0B1120" />
+    <meta name="description" content="Portfolio of Mugilan M - Software Test Engineer with 1+ year of experience in manual, functional, API, regression, and mobile testing, building UI automation with Python and Playwright." />
+    <meta name="keywords" content="Software Test Engineer, QA Engineer, Manual Testing, Automation Testing, Python, Playwright, Postman API Testing, Swagger, Mobile App Testing, Regression Testing, Chennai" />
+    <meta name="author" content="Mugilan" />
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:title" content="Mugilan | Software Test Engineer & QA Portfolio" />
+    <meta property="og:description" content="Software Test Engineer | Manual & Automation Testing | API & Mobile Testing. 1,500+ test cases, 430+ defects, 60+ REST APIs." />
+    <meta property="og:type" content="website" />
+
+    <title>Mugilan | Software Test Engineer &amp; QA Portfolio</title>
+
+    <!-- Google Fonts: Space Grotesk (Headings) & Inter (Body) & DM Mono (Code/Logs) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function() {
+        try {
+          const saved = localStorage.getItem('mugi_theme');
+          const theme = saved || 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch(e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress-bar" class="scroll-progress-bar" aria-hidden="true"></div>
+
+    <!-- Software Tester QA Atmospheric Background System -->
+    <div class="qa-tester-background-system" aria-hidden="true">
+      <!-- QA Artwork Layer with Deep Navy Mask -->
+      <div class="qa-tester-art-backdrop"></div>
+      
+      <!-- QA Technical Blueprint & Matrix Grid with Crosshairs -->
+      <div class="qa-matrix-grid"></div>
+
+      <!-- Dynamic QA Laser Scanner Line -->
+      <div class="qa-laser-scanner"></div>
+
+      <!-- Glowing Ambient Light Orbs -->
+      <div class="mesh-orb orb-1"></div>
+      <div class="mesh-orb orb-2"></div>
+      <div class="mesh-orb orb-3"></div>
+
+    </div>
+    <canvas id="qa-ambient-canvas" class="qa-ambient-canvas" aria-hidden="true"></canvas>
+
+    <!-- Header Section -->
+    <div data-section="header"></div>
+
+    <!-- Main Content Sections -->
+    <main id="main-content">
+      <div data-section="hero"></div>
+      <div data-section="about"></div>
+      <div data-section="skills"></div>
+      <div data-section="projects"></div>
+      <div data-section="experience"></div>
+      <div data-section="approach"></div>
+      <div data-section="workflow"></div>
+      <div data-section="learning"></div>
+      <div data-section="resume"></div>
+      <div data-section="contact"></div>
+    </main>
+
+    <!-- Footer Section -->
+    <div data-section="footer"></div>
+
+    <!-- Modal 1: Sample Bug Report Modal -->
+    <div class="modal-backdrop" id="bug-modal" aria-hidden="true" role="dialog" aria-labelledby="bug-modal-title">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div class="modal-badge-group">
+            <span class="modal-bug-id">BUG-204</span>
+            <span class="modal-badge high">Severity: High</span>
+            <span class="modal-badge p1">Priority: P1</span>
+          </div>
+          <button class="modal-close" data-close="bug-modal" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3 class="modal-title" id="bug-modal-title">
+            Checkout submit button remains disabled when entering valid 10-digit postal code with trailing whitespace
+          </h3>
+          <div class="modal-meta-table">
+            <div class="modal-meta-row"><span>Project / Module:</span><strong>E-Commerce Checkout &bull; Billing Service</strong></div>
+            <div class="modal-meta-row"><span>Environment:</span><strong>Chrome 124 / Windows 11 / Staging Build v2.4.1</strong></div>
+            <div class="modal-meta-row"><span>Test Type:</span><strong>Functional &bull; Boundary Value Analysis (BVA)</strong></div>
+            <div class="modal-meta-row"><span>Status:</span><strong class="green-text">Verified &amp; Closed</strong></div>
+          </div>
+
+          <h4 class="modal-subtitle">Steps to Reproduce:</h4>
+          <ol class="modal-list">
+            <li>Navigate to <code>/checkout</code> as an authenticated customer.</li>
+            <li>Add items to cart with total value exceeding minimum order amount ($50.00).</li>
+            <li>Fill in customer name, street address, and city correctly.</li>
+            <li>Enter postal code as <code>"600001 "</code> (6 digits followed by one trailing space character).</li>
+            <li>Click outside the field or press Tab to trigger blur validation.</li>
+            <li>Observe button <code>#btn-place-order</code>.</li>
+          </ol>
+
+          <div class="modal-comparison">
+            <div class="modal-box expected">
+              <span class="box-title">Expected Result:</span>
+              <p>Application trims string whitespace on input. Postal code is parsed as valid "600001", validation passes, and the "Place Order" button enables.</p>
+            </div>
+            <div class="modal-box actual">
+              <span class="box-title">Actual Result:</span>
+              <p>Strict regex rejects whitespace as non-numeric characters. Place order button remains permanently disabled with no user-facing error message.</p>
+            </div>
+          </div>
+
+          <h4 class="modal-subtitle">Console Log &amp; API Response:</h4>
+          <pre class="modal-code"><code>POST /api/v1/checkout/validate-address
+Status: 422 Unprocessable Entity
+Response: { "field": "postal_code", "error": "Regex mismatch: ^[0-9]{6}$" }</code></pre>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-close="bug-modal">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2: Sample QA Test Documentation Modal -->
+    <div class="modal-backdrop" id="testcases-modal" aria-hidden="true" role="dialog" aria-labelledby="tc-modal-title">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-header">
+          <div class="modal-badge-group">
+            <span class="modal-badge green">QA DELIVERABLES</span>
+            <span class="modal-bug-id">Test Case Design Matrix</span>
+          </div>
+          <button class="modal-close" data-close="testcases-modal" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3 class="modal-title" id="tc-modal-title">Sample Test Scenarios &amp; Test Cases Matrix</h3>
+          <p class="modal-desc">Demonstrating structured boundary value analysis and positive/negative test case design.</p>
+          
+          <div class="table-responsive">
+            <table class="qa-table">
+              <thead>
+                <tr>
+                  <th>Test ID</th>
+                  <th>Module</th>
+                  <th>Test Scenario</th>
+                  <th>Test Data / Technique</th>
+                  <th>Expected Result</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>TC-AUTH-001</code></td>
+                  <td>Authentication</td>
+                  <td>Valid credentials login</td>
+                  <td>Valid email &amp; matching password</td>
+                  <td>Redirects to user dashboard, session token set</td>
+                  <td><span class="status-pill pass">Passed</span></td>
+                </tr>
+                <tr>
+                  <td><code>TC-AUTH-002</code></td>
+                  <td>Authentication</td>
+                  <td>Invalid password attempt</td>
+                  <td>Registered email, wrong password</td>
+                  <td>Displays "Invalid email or password", HTTP 401</td>
+                  <td><span class="status-pill pass">Passed</span></td>
+                </tr>
+                <tr>
+                  <td><code>TC-AUTH-003</code></td>
+                  <td>Authentication</td>
+                  <td>SQL injection in username field</td>
+                  <td><code>admin' OR '1'='1</code></td>
+                  <td>Input sanitized, generic error, no crash</td>
+                  <td><span class="status-pill pass">Passed</span></td>
+                </tr>
+                <tr>
+                  <td><code>TC-FORM-004</code></td>
+                  <td>Registration</td>
+                  <td>Password length boundary (BVA)</td>
+                  <td>7 chars (invalid) vs 8 chars (valid)</td>
+                  <td>Helper text activates, submit only enabled at 8+</td>
+                  <td><span class="status-pill pass">Passed</span></td>
+                </tr>
+                <tr>
+                  <td><code>TC-API-005</code></td>
+                  <td>User API</td>
+                  <td>Verify GET /api/v1/users/id</td>
+                  <td>Valid User ID = 1042</td>
+                  <td>Status 200, JSON schema matches schema.json</td>
+                  <td><span class="status-pill pass">Passed</span></td>
+                </tr>
+                <tr>
+                  <td><code>TC-PROP-006</code></td>
+                  <td>Property Leasing</td>
+                  <td>Lease rent boundary validation (BVA)</td>
+                  <td>Min rent $500, Max $15,000</td>
+                  <td>Validates boundaries, rejects negative/zero rent</td>
+                  <td><span class="status-pill pass">Passed</span></td>
+                </tr>
+                <tr>
+                  <td><code>TC-SWAG-007</code></td>
+                  <td>Swagger API</td>
+                  <td>Verify GET /api/v1/properties/filter</td>
+                  <td>OpenAPI 3.0 query params: city, price_min, beds</td>
+                  <td>HTTP 200 OK, response matches Swagger OpenAPI model</td>
+                  <td><span class="status-pill pass">Passed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-close="testcases-modal">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3: Resume Preview Modal -->
+    <div class="modal-backdrop" id="resume-modal" aria-hidden="true" role="dialog" aria-labelledby="resume-modal-title">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-header">
+          <div class="modal-badge-group">
+            <span class="modal-badge blue">RESUME PREVIEW</span>
+            <span class="modal-bug-id">Mugilan M — Software Test Engineer</span>
+          </div>
+          <button class="modal-close" data-close="resume-modal" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="resume-sheet">
+            <div class="sheet-header">
+              <h2>Mugilan M</h2>
+              <p class="sheet-title">Software Test Engineer &bull; Manual &amp; Automation Testing &bull; API &amp; Mobile Testing</p>
+              <p class="sheet-contact">Chennai, India &bull; Mugilanmugilan636@gmail.com &bull; linkedin.com/in/mugilan-m-4b953527b</p>
+            </div>
+            
+            <div class="sheet-section">
+              <h3 class="sheet-heading">Summary</h3>
+              <p>Software Test Engineer with 1+ year of experience in quality assurance, having executed 1,500+ test cases, reported 430+ defects, and validated 60+ REST APIs across manual, functional, API, regression, and mobile application testing. Skilled in test case design, requirement analysis, defect tracking, and UI validation across development, QA, and staging environments. Building UI automation with Python and Playwright.</p>
+            </div>
+
+            <div class="sheet-section">
+              <h3 class="sheet-heading">Skills</h3>
+              <p><strong>Testing:</strong> Manual, Automation, Functional, Regression, Smoke, Sanity, Black Box, UI, End-to-End</p>
+              <p><strong>Platforms:</strong> Web Applications, Mobile Applications, Cross-Platform Data Validation</p>
+              <p><strong>API Testing:</strong> REST APIs, Postman, Swagger, HTTP Status Codes, JSON Validation</p>
+              <p><strong>Automation:</strong> Python, Playwright, Web UI Automation, Locators, Assertions</p>
+              <p><strong>Defect Management &amp; Process:</strong> Bug Reporting, Bug Tracking, Defect Life Cycle, Retesting, SDLC, STLC</p>
+            </div>
+
+            <div class="sheet-section">
+              <h3 class="sheet-heading">Professional Experience</h3>
+              <p><strong>Associate QA</strong> | Property Automate | Sep 2025 – Present</p>
+              <ul>
+                <li>Managed QA for 4 facility management modules: Visitor, Parking, Contact Management, and Facility Operations.</li>
+                <li>Designed and executed 1,500+ test cases covering end-to-end workflows, including positive, negative, and edge cases.</li>
+                <li>Verified 60+ REST APIs in Postman and Swagger for status codes, response data, and JSON fields.</li>
+                <li>Executed mobile app QA and validated mobile and web data against backend API responses.</li>
+                <li>Ran regression cycles for 2 sprint releases per month across development, QA, and staging.</li>
+                <li>Reported and tracked 430+ defects through the defect life cycle.</li>
+              </ul>
+            </div>
+
+            <div class="sheet-section">
+              <h3 class="sheet-heading">Projects &amp; Education</h3>
+              <p><strong>UI Automation with Python and Playwright</strong> (Ongoing): automating repetitive regression workflows with reliable locators, assertions, and reusable functions.</p>
+              <p><strong>MSc in Software Engineering</strong>, Annamalai University, 2020 – 2025</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-primary" href="Mugilan_QA.pdf" download="Mugilan_QA.pdf">
+            <span>📥</span> Download PDF
+          </a>
+          <button class="btn btn-secondary" data-close="resume-modal">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4: Property Management System QA Case Study Modal -->
+    <div class="modal-backdrop" id="property-modal" aria-hidden="true" role="dialog" aria-labelledby="prop-modal-title">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-header">
+          <div class="modal-badge-group">
+            <span class="modal-badge blue">QA CASE STUDY</span>
+            <span class="modal-bug-id">Property Management System</span>
+          </div>
+          <button class="modal-close" data-close="property-modal" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <h3 class="modal-title" id="prop-modal-title">Property Automate — Facility Management QA</h3>
+          <p class="modal-desc">Structured functional, API, and mobile testing across four facility management modules.</p>
+
+          <div class="modal-meta-table">
+            <div class="modal-meta-row"><span>Role:</span><strong>Associate QA &bull; Sep 2025 – Present</strong></div>
+            <div class="modal-meta-row"><span>Modules:</span><strong>Visitor, Parking, Contact Management &amp; Facility Operations</strong></div>
+            <div class="modal-meta-row"><span>Tools Used:</span><strong>Postman, Swagger, defect tracking across Dev / QA / Staging</strong></div>
+            <div class="modal-meta-row"><span>Coverage &amp; Results:</span><strong class="green-text">1,500+ Test Cases &bull; 60+ APIs &bull; 430+ Defects Tracked</strong></div>
+          </div>
+
+          <h4 class="modal-subtitle">Testing Activities:</h4>
+          <ol class="modal-list">
+            <li><strong>Functional Testing:</strong> Validated features against business requirements and user stories, covering positive, negative, and edge-case scenarios.</li>
+            <li><strong>API Verification:</strong> Checked HTTP status codes, response data, and JSON fields for 60+ REST APIs in Postman and Swagger.</li>
+            <li><strong>Mobile App QA:</strong> Covered user workflows, navigation, form validations, and UI consistency across devices.</li>
+            <li><strong>Cross-Platform Data Validation:</strong> Compared mobile and web data with backend API responses to confirm accuracy.</li>
+            <li><strong>UI Audits:</strong> Reviewed form fields, buttons, search filters, and validation rules.</li>
+            <li><strong>Regression Cycles:</strong> Confirmed bug fixes and kept existing features stable for 2 sprint releases per month.</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-close="property-modal">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification Element -->
+    <div class="toast-message" id="toast-message" role="status" aria-live="polite"></div>
+
+    <script src="Mugi_portfoio.js"></script>
+  </body>
+</html>
