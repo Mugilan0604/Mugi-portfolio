@@ -4103,10 +4103,10 @@ code, pre {
   }
 }
 
-/* About profile photo */
-.about-profile { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem; }
-.about-photo { width: 120px; height: 120px; flex-shrink: 0; border-radius: 50%; object-fit: cover; object-position: 50% 25%; border: 3px solid var(--accent-green); box-shadow: 0 0 24px var(--accent-green-glow); }
-.about-profile-text { display: flex; flex-direction: column; gap: 0.25rem; }
-.about-profile-text strong { font-size: 1.25rem; }
-.about-profile-text span { opacity: 0.75; font-size: 0.95rem; }
-@media (max-width: 480px) { .about-profile { flex-direction: column; text-align: center; } }
+/* Hero profile photo */
+.hero-profile { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem; }
+.hero-photo { width: 132px; height: 132px; flex-shrink: 0; border-radius: 50%; object-fit: cover; object-position: 50% 25%; border: 3px solid var(--accent-green); box-shadow: 0 0 28px var(--accent-green-glow); }
+.hero-profile-text { display: flex; flex-direction: column; gap: 0.25rem; }
+.hero-profile-text strong { font-size: 1.35rem; }
+.hero-profile-text span { opacity: 0.75; font-size: 0.95rem; }
+@media (max-width: 480px) { .hero-profile { flex-direction: column; text-align: center; } }
